@@ -8,8 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      working-directory: ./cise_ci_cd
+    
 
     steps:
       - uses: actions/checkout@v2
@@ -18,3 +17,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "reactapptutorial-heroku" #Must be unique in Heroku
           heroku_email: "gerardalexigomez@yahoo.com"
+      env:
+      working-directory: ./cise_ci_cd
